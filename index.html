@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="JavaScript Intermedio">
+    <meta name="author" content="Joseph Carrera" >
+    <title>Taller 3</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/logo-jecs.png" alt="logo del sitio" width="60">
+        <h1>Taller 3 - JavaScript Intermedio</h1>
+        <nav>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#formulario">Formulario</a>
+            <a href="#fechas">Fechas</a>
+        </nav>
+    </header>
+    <main>
+        <section id="calculadora">
+            <h2>Calculadora</h2>
+            <p id="resultadoCalculadora"></p>
+            <div>
+                <label for="txtNumero1">1° Número:</label>
+                <input type="number" name="txtNumero1" id="txtNumero1">
+                <label for="txtNumero2">2° Número:</label>
+                <input type="number" name="txtNumero2" id="txtNumero2">
+            </div>
+            <div>
+                <button id="btnSuma">+</button>
+                <button id="btnResta">-</button>
+                <button id="btnMult">x</button>
+                <button id="btnDiv">/</button>
+            </div>
+        </section>
+        <section id="formulario">
+            <h2>Formulario de Registro</h2>
+            <form id="frmDatos">
+                <label for="txtNombre">Nombre:</label>
+                <input type="text" name="txtNombre" id="txtNombre">
+                <span id="comprobacionNombre"></span>
+                <label for="txtCorreo">Correo:</label>
+                <input type="email" name="txtCorreo" id="txtCorreo">
+                <span id="comprobacionCorreo"></span>
+                <label for="txtContrasena">Contraseña:</label>
+                <input type="password" name="txtContrasena" id="txtContrasena">
+                <span id="comprobacionContrasena"></span>
+                <label for="dtFechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" name="dtFechaNacimiento" id="dtFechaNacimiento">
+                <span id="comprobacionFechaNacimiento"></span>
+                <input type="submit" id="btnEnviar" value="Enviar">
+            </form>
+            <p id="resultadosDatos"></p>
+        </section>
+        <section id="fechas">
+            <h2>Fechas</h2>
+            <p id="resultadoFecha"></p>
+            <div>
+                <label for="dtFechaInicio">Fecha Inicio:</label>
+                <input type="date" name="dtFechaInicio" id="dtFechaInicio">
+                <label for="dtFechaFin">Fecha Fin:</label>
+                <input type="date" name="dtFechaFin" id="dtFechaFin">
+                <button id="btnFechas">Diferencia</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Joseph Carrera 2025. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

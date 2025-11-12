@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #FCF4D9;
+    --primary: #00AAA0;
+    --secondary: #8ED2C9;
+    --text: #141313;
+    --text-invert: #fdfafa;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 200px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2.0;
+    color: var(--text);
+    background: var(--background);
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background: var(--primary);
+    color: var(--text-invert);
+    padding-block: 10px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-inline: 15px 0;
+    padding-block: 10px 0;
+    filter: invert(1);
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3px;
+    margin-block: 0 5px;
+    margin-inline: auto;
+    background: var(--secondary);
+}
+
+h1, h2 {
+    text-wrap: balance;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-invert);
+    padding: 5px;
+    border-radius: 10px;
+    transition: color 0.5s ease-in, background 0.5s ease-out;
+    margin-inline: 10px;
+}
+
+nav a:hover {
+    color: var(--text);
+    background: var(--background);
+}
+
+main {
+    width: 90%;
+    min-width: 300px;
+    margin-inline: auto;
+    margin-block: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+main section {
+    padding-block: 10px;
+    padding-inline: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--secondary);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 8px var(--secondary);
+}
+
+section h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+section p {
+    display: inline-block;
+    width: 100%;
+    min-height: 30px;
+    border-radius: 15px;
+}
+
+#calculadora div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 10px 5px;
+    margin-inline: auto;
+    margin-block: 10px;
+}
+
+button,
+#btnEnviar {
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+    background: var(--primary);
+    box-shadow: 2px 2px 0 var(--text);
+    transition: all 0.5s;
+}
+
+button:active,
+#btnEnviar:active {
+    background: var(--secondary);
+    box-shadow: 0px 0px 0 var(--text);
+}
+
+
+
+#calculadora #resultadoCalculadora {
+    transition: all 0.5s ease;
+}
+
+#formulario form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-wrap: pretty;
+    margin-block: 0 10px;
+}
+
+#formulario label {
+    text-align: left;
+}
+
+#txtContrasena {
+    align-self: start;
+    min-height: 1.8rem;
+}
+
+#comprobacionContrasena {
+    height: 8.1rem;
+}
+
+span {
+    text-align: start;
+}
+
+#btnEnviar {
+    grid-column: 2 / 3;
+}
+
+section #resultadosDatos {
+    text-align: start;
+    height: 9.7rem;
+    padding: 5px;
+    transition: background 0.5s;
+}
+
+#fechas div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+}
+
+#fechas div label {
+    grid-column: 2 / 3;
+    text-align: left;
+}
+
+#fechas div input {
+    grid-column: 3 / 4;
+}
+
+#fechas div #btnFechas {
+    grid-column: 2 / 4;
+}
+
+#fechas #resultadoFecha {
+    height: 2rem;
+    margin-block: 10px;
+}
+
+ul, ol {
+    padding-inline-start: 30px;
+}
+
+footer {
+    margin-block-start: 30px;
+    padding: 10px;
+    background: var(--primary);
+    text-align: center;
+}
