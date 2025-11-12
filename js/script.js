@@ -20,15 +20,17 @@ function logicaCalculadora(){
     const botones = document.querySelectorAll("#calculadora div button");
     botones.forEach( btn => {
         btn.addEventListener("click", () => {
-            const n1 = parseFloat(document.getElementById("txtNumero1").value);
-            const n2 = parseFloat(document.getElementById("txtNumero2").value);
+            const n1 = document.getElementById("txtNumero1").value;
+            const n2 = document.getElementById("txtNumero2").value;
             const resultado = document.getElementById("resultadoCalculadora");
-            
+            console.log(n1, n2);
             if (!n1 | !n2) {
                 resultado.textContent = "Campos Vacios";
                 return;
             }
-            const [respuesta, color] = operacionAritmetica(btn.textContent, n1, n2);
+            let number1 = parseFloat(n1);
+            let number2 = parseFloat(n2);
+            const [respuesta, color] = operacionAritmetica(btn.textContent, number1, number2);
 
             resultado.textContent = isNaN(respuesta) ? "No se puede dividir para 0": respuesta.toFixed(2);
             resultado.style.background = color;
